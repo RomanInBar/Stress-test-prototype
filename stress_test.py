@@ -217,7 +217,7 @@ class ThreadsEventLoop(Thread):
         self.daemon = True
 
     def run(self):
-        logging.info('Запуск бесконечного цикла asyncio')
+        logging.info('Запуск бесконечного цикла в дочернем потоке')
         self._loop.run_forever()
 
 
