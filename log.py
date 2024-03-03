@@ -1,10 +1,9 @@
 import logging
 
-PATHC = 'Stress-test-prototype/stress-test.log'
 
 logging.basicConfig(
     level=logging.INFO,
-    filename=PATHC,
+    filename='stress-test.log',
     filemode='w',
     format='''
     %(levelname)s [%(asctime)s] %(filename)s > %(funcName)s

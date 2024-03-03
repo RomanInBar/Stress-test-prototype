@@ -86,10 +86,10 @@ class StressTest:
         start = time()
         logging.info('Старт запросов к целевому адресу.')
         async with ClientSession() as session:
-            reqs = [
+            reqs = (
                 self._get_url(session, self._url)
                 for _ in range(self._total_requests)
-            ]
+            )
             await asyncio.gather(*reqs)
             logging.info(
                 f'Итоговая статистика ответов от сервера: {self.responses}'
